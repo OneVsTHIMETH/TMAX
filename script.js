@@ -2491,6 +2491,3 @@ document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
   `;
   document.head.appendChild(style);
 })();
-card.addEventListener("click", () => {
-    card.classList.toggle("flipped");
-});
