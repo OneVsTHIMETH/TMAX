@@ -2365,7 +2365,7 @@ brands.forEach((brand,bi)=>{
  }
  function move(dir){active=(active+dir+brand.bikes.length)%brand.bikes.length;flipped=false;carousel.querySelectorAll(".bike-card").forEach(c=>c.classList.remove("flipped"));render();restart()}
  function auto(){if(!paused && !flipped)move(1)}
- function restart(){clearInterval(timer)}
+ function restart(){clearInterval(timer);timer=setInterval(auto,3200)}
  section.querySelector(".carousel-next").onclick=()=>move(1);
  section.querySelector(".carousel-prev").onclick=()=>move(-1);
  section.querySelector(".flip-btn").onclick=()=>{flipped=!flipped;carousel.children[active].querySelector(".bike-card").classList.toggle("flipped",flipped)};
